@@ -1,3 +1,10 @@
+/*
+Guessing Game 
+Computer thinks of a number, user tries to guess it
+Made by Mihira Sogal
+9/15/2017
+
+ */
 #include <iostream>
 #include <ctime>
 #include<cstdlib>
@@ -13,6 +20,7 @@ using namespace std;
     cout<<"Type in you guess";
     cin>>input;
     guesses++;
+    //if they are correct, tell hte htme hte # of guesses they took, and then offer a new game
     if(input==number){
       cout<<"Correct! You used " << guesses<< " guesses" << endl;
       cout<<"New game? (y/n)";
@@ -28,6 +36,7 @@ using namespace std;
 	playing = false;
       }
     }
+    //if they are too high or low, tell them whether they are high/low, and offer another guess. Also display the # ofguesse so far
     else if(input > number){
       cout<<"Too high. You have used " <<guesses<<" guesses"<<endl;
       cout<<"Continue playing? (y/n)";
